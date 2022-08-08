@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//메뉴판 다 띄울 예정. main에는 직원의 설명하는 것처럼
+//메뉴판 다 띄울 예정. main에는 직원 설명하는 것처럼
 
 int money = 20000;
 int bread_cost = 1000; // 빵종류에 따라 +
