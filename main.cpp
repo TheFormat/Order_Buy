@@ -11,6 +11,50 @@ int veg_simp_cost = 1500; // simple은 기본, add는 +
 int bev_cost = 1000; // 음료는 사이즈크면 +
 int money_you_pay = 0;
 
+int getCostOfBread(string bread) {
+    if(bread == "toast") {
+        return 0;
+    }
+    else if(bread == "oat") {
+        return 300;
+    }
+    else if(bread == "triple_toast") {
+        return 500;
+    }
+    else if(bread == "panini") {
+        return 300;
+    }
+    else if(bread == "roll") {
+        return 200;
+    } 
+
+    return 0;
+}
+
+int getCostOfMains(string mains) {
+    if(mains == "egg") {
+        return 0;
+    }
+    else if(mains == "sausage") {
+        return 0;
+    }
+    else if(mains == "greeneggs_and_ham") {
+        return 300;
+    }
+    else if(mains == "grilled_pork") {
+        return 300;
+    }
+    else if(mains == "roasted_beef") {
+        return 500;
+    }
+    else if(mains == "bestie") {
+        return 1000;
+    }
+    
+    return 0;
+}
+
+
 string bread;
 string mains;
 string rm_cheese;
@@ -21,42 +65,11 @@ string bev;
 int main() {
     cout << "Welcome! Choose your bread" << endl;
     cin >> bread;
-    if(bread == "toast") {
-        bread_cost += 0;
-    }
-    if(bread == "oat") {
-        bread_cost +=300;
-    };
-    if(bread == "triple_toast") {
-        bread_cost += 500;
-    };
-    if(bread == "panini") {
-        bread_cost += 300;
-    };
-    if(bread == "roll") {
-        bread_cost += 200;
-    }; // enum switch로 할려 했는데 어케할지 모르겠넹..
+    bread_cost += getCostOfBread(bread);
 
     cout << "Next, choose your fillings. What main filling do you want?" << endl;
     cin >> mains;
-    if(mains == "egg") {
-        main_cost += 0;
-    };
-    if(mains == "sausage") {
-        main_cost += 0;
-    };
-    if(mains == "greeneggs_and_ham") {
-        main_cost += 300;
-    };
-    if(mains == "grilled_pork") {
-        main_cost += 300;
-    };
-    if(mains == "roasted_beef") {
-        main_cost += 500;
-    };
-    if(mains == "bestie") {
-        main_cost += 1000;
-    };
+    main_cost += getCostOfMains(mains);
 
     cout << "Good. We offer grilled cheese for base. Would you like to take cheese out of your sandwich?" << endl;
     cin >> rm_cheese;
