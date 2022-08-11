@@ -7,7 +7,7 @@ using namespace std;
 int money = 20000;
 int bread_cost = 1000; // 빵종류에 따라 +
 int main_cost = 1500; // 메인종류에 따라 +
-int veg_basic_cost = 1500; // simple은 기본, add는 +
+int veg_basic_cost = 1000; // simple은 기본, add는 +
 int bev_cost = 1000; // 음료는 사이즈크면 +
 int money_you_pay = 0;
 
@@ -85,6 +85,5 @@ int main() {
     cout << "Here's your " << bread << " " << mains << " sandwich!" << endl;
     cout << "Enjoy your Sandwich!";
     
-return 0;
-
+    return 0;
 }
