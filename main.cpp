@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+
 
 using namespace std;
 
@@ -63,6 +65,16 @@ string spread;
 string bev;
 
 int main() {
+    ifstream ifs;
+    ifs.open("menu.txt");
+    char c;
+    while(ifs.get(c)) {
+        cout << c;
+    }
+    ifs.close();
+    cout << endl;
+    
+    
     cout << "Welcome! Choose your bread" << endl;
     cin >> bread;
     bread_cost += getCostOfBread(bread);
