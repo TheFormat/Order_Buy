@@ -87,7 +87,7 @@ int main() {
     cin >> rm_cheese;
     if(rm_cheese == "yes") {
         main_cost -= 100;
-    };
+    }
 
     int total_cost = bread_cost + main_cost + veg_basic_cost + bev_cost;
     cout << "Your sandwich would cost " << total_cost << "." << endl;
